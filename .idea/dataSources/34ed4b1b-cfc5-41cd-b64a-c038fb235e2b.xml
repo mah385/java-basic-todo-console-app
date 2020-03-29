@@ -12,7 +12,7 @@
     <database id="3" parent="1" name="java-basic-todo-console-app">
       <ObjectId>19014</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1068</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1071</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="4" parent="1" name="my_gofrugal_db">
@@ -64,7 +64,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1069</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1072</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="15" parent="3" name="btree">
@@ -123,85 +123,146 @@
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <table id="22" parent="14" name="tbl_users">
+    <table id="22" parent="14" name="tbl_tasks">
+      <ObjectId>19724</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1070</StateNumber>
+    </table>
+    <table id="23" parent="14" name="tbl_users">
       <ObjectId>19705</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1018</StateNumber>
     </table>
-    <column id="23" parent="22" name="id">
+    <column id="24" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>char(36)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="25" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="26" parent="22" name="description">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="27" parent="22" name="status">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="28" parent="22" name="priority">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="22" name="created_date">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="30" parent="22" name="tbl_tasks_pkey">
+      <ObjectId>19727</ObjectId>
+      <StateNumber>1070</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="31" parent="22" name="tbl_tasks_pkey">
+      <ObjectId>19728</ObjectId>
+      <StateNumber>1070</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>tbl_tasks_pkey</UnderlyingIndexName>
+    </key>
+    <column id="32" parent="23" name="id">
       <Position>1</Position>
       <DataType>char(36)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1018</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="24" parent="22" name="first_name">
+    <column id="33" parent="23" name="first_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="25" parent="22" name="last_name">
+    <column id="34" parent="23" name="last_name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>1018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="26" parent="22" name="email">
+    <column id="35" parent="23" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="27" parent="22" name="username">
+    <column id="36" parent="23" name="username">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="28" parent="22" name="password">
+    <column id="37" parent="23" name="password">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="29" parent="22" name="tbl_users_pkey">
+    <index id="38" parent="23" name="tbl_users_pkey">
       <ObjectId>19708</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="30" parent="22" name="tbl_users_email_key">
+    <index id="39" parent="23" name="tbl_users_email_key">
       <ObjectId>19710</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="31" parent="22" name="tbl_users_username_key">
+    <index id="40" parent="23" name="tbl_users_username_key">
       <ObjectId>19712</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="32" parent="22" name="tbl_users_pkey">
+    <key id="41" parent="23" name="tbl_users_pkey">
       <ObjectId>19709</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tbl_users_pkey</UnderlyingIndexName>
     </key>
-    <key id="33" parent="22" name="tbl_users_email_key">
+    <key id="42" parent="23" name="tbl_users_email_key">
       <ObjectId>19711</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>tbl_users_email_key</UnderlyingIndexName>
     </key>
-    <key id="34" parent="22" name="tbl_users_username_key">
+    <key id="43" parent="23" name="tbl_users_username_key">
       <ObjectId>19713</ObjectId>
       <StateNumber>1018</StateNumber>
       <ColNames>username</ColNames>

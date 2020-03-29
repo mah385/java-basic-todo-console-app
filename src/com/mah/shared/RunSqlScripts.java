@@ -43,7 +43,7 @@ public class RunSqlScripts {
 
     private static void createTable(Connection connection, String fileNameOfTableToBeCreated) {
         try {
-            new ScriptRunner(connection).runScript(new BufferedReader(new FileReader(String.format("/home/admin/gft-workspace/java-basic-todo-console-app/src/com/mah/resources/%s.sql", fileNameOfTableToBeCreated))));
+            new ScriptRunner(connection).runScript(new BufferedReader(new FileReader(String.format("/home/admin/my-git-workspace/java-basic-todo-console-app/src/com/mah/resources/%s.sql", fileNameOfTableToBeCreated))));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -52,7 +52,7 @@ public class RunSqlScripts {
     private static List<String> getAllTablesToBeCreated() {
         List<String> listOfAllTablesToBeCreated = new ArrayList<>();
         listOfAllTablesToBeCreated.add("tbl_users");
-        listOfAllTablesToBeCreated.add("tbl_employees");
+        listOfAllTablesToBeCreated.add("tbl_tasks");
         return listOfAllTablesToBeCreated;
     }
 
